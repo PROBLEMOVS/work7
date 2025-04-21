@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intake Main Flow</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    input[type="checkbox"]:checked {
+      accent-color: rgba(255, 0, 255, 1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-10">
+  <div class="max-w-7xl mx-auto space-y-10">
+    <div>
+      <h1 class="text-3xl font-semibold">Intake Main Flow</h1>
+      <p class="text-sm text-red-500 mt-1">* Mandatory field</p>
+    </div>
+<hr>
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Information</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block font-medium mb-1">Intake Type<span class="text-red-500">*</span> <span class="text-red-500 text-sm">(select)</span></label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>Referral</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Enrollment Initiation Date jQuery</label>
+          <input class="w-full border border-gray-300 rounded-md p-2" value="05/11/2021" readonly />
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Phone <span class="text-red-500">*</span></label>
+          <input type="tel" placeholder="(123) 456-7890" class="w-full border border-gray-300 rounded-md p-2" required />
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Application Category<span class="text-red-500">*</span></label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>Child Support</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Email <span class="text-red-500">*</span></label>
+          <input type="email" placeholder="you@example.com" class="w-full border border-gray-300 rounded-md p-2" required />
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Enrollment Submission Date (Optional)</label>
+          <input class="w-full border border-gray-300 rounded-md p-2" value="05/11/2021" />
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Application Registration <span class="text-gray-500">(Optional)</span></label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>APP0000116</option> </select>
+        </div>
+        <div>
+        </div>
+        <div>
+            <label class="block font-medium mb-1">Additional Information Requested Date <span class="text-gray-500">(Optional)</span></label>
+            <input class="w-full border border-gray-300 rounded-md p-2" value="05-13-2021" />
+          </div>
+          
+            <div class="flex items-center space-x-2 mt-6">
+                <input type="checkbox" class="h-4 w-4" />
+                <label>PURGED</label>
+              </div>
+        <div>
+          <label class="block font-medium mb-1">Remaining Days Before Referral is Purged <span class="text-gray-500">(Optional)</span></label>
+          <input class="w-full border border-gray-300 rounded-md p-2" value="13" />
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Exempt from Paternity <span class="text-gray-500">(Optional)</span> <span class="text-red-500 text-sm">(select)</span></label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>No</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Fee Payment Date <span class="text-gray-500">(Optional)</span></label>
+          <input class="w-full border border-gray-300 rounded-md p-2" value="05/13/2021" />
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Enrollment Status <span class="text-gray-500">(Optional)</span></label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>Worklisted</option> </select>
+        </div>
+      </div>
+      <div class="mt-4">
+        <label class="inline-flex items-center">
+          <input type="checkbox" class="form-checkbox text-purple-600" checked>
+          <span class="ml-2 font-medium">Application Fee Processed</span>
+        </label>
+      </div>
+    </section>
+<hr>
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Maternity Information</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <label class="inline-flex items-center">
+          <input type="checkbox" class="form-checkbox">
+          <span class="ml-2">Are you requesting child support services for an unborn child?</span>
+        </label>
+        <div>
+          <label class="block font-medium mb-1">Other known biological parent? <span class="text-gray-500">(Optional)</span></label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>None</option> </select>
+        </div>
+      </div>
+    </section>
+<hr>
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Official Use</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block font-medium mb-1">Case Category <span class="text-red-500">(select)</span></label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>Active IV-A</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">IV-D Indicator<span class="text-red-500">*</span></label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>Non-IV-D</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Arrears Only Indicator (Optional)</label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>None</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Intergovernmental Case Category (Optional)</label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>None</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Assigned County of Ownership (Optional)</label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>None</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Intergovernmental Case Type (Optional)</label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>None</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Intergovermental Case Status (details)</label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>None</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Case Number</label>
+          <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Search Case Number" />
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Special Handling Indicator for Applicant (Optional)</label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>None</option> </select>
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Referral Number</label>
+          <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Search Referral Number" />
+        </div>
+        <div>
+          <label class="block font-medium mb-1">Special Handling Indicator for Other Parent
+            (Optional)</label>
+          <select class="w-full border border-gray-300 rounded-md p-2"> <option>None</option> </select>
+        </div>
+      </div>
+    </section>
+<hr>
+    <section>
+      <h2 class="text-xl font-semibold mb-4">System Information</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <label class="block font-medium mb-1">Enrollment Taken by User </label>
+            <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Search Input" />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Intake Supervisor (Optional)</label>
+            <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Search" />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Worker (Optional)</label>
+            <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Search Input" />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Owner (Optional)</label>
+            <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Rajaneesh Banal" />
+          </div>
+      </div>
+    </section>
+<hr>
+    <div class="text-right">
+      <button class="bg-blue-600 text-white px-6 py-2 rounded-md"><a href="../work77/index.html">Next</a></button>
+    </div>
+  </div>
+</body>
+</html>
