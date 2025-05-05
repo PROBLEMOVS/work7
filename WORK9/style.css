@@ -1,0 +1,230 @@
+:root {
+    --bg-light: #f5f5f5;
+    --bg-dark: #111212;
+    --text-dark: #000;
+    --text-light: #333;
+    --accent: #00ff90;
+    --text-muted: #888; 
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--text-light);
+  }
+
+  
+  .light-mode .sidebar {
+    background-color: var(--bg-light);
+  }
+
+  .light-mode .menu-item {
+    background-color: var(--bg-light);
+  }
+
+  .light-mode .menu-item svg {
+    fill: var(--accent);
+  }
+
+  .light-mode .theme-toggle {
+    background: #333;
+    color: var(--text-light);
+  }
+
+  .light-mode {
+    background-color: var(--bg-dark);
+    color: var(#333);
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: var(#333);
+    color: var(#333);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    transition: width 0.3s ease;
+    border-radius: 0 20px 20px 0;
+    overflow-x: hidden;
+  }
+
+  .sidebar:hover,
+  .sidebar.expanded {
+    width: 240px;
+  }
+
+  .sidebar .menu-item span,
+  .sidebar .logo,
+  .sidebar .pro-upgrade,
+  .sidebar .user-info div,
+  .sidebar .search-box input,
+  .sidebar .theme-toggle {
+    display: none;
+  }
+
+  .sidebar:hover .menu-item span,
+  .sidebar:hover .logo,
+  .sidebar:hover .pro-upgrade,
+  .sidebar:hover .user-info div,
+  .sidebar:hover .search-box input,
+  .sidebar:hover .theme-toggle {
+    display: inline;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+
+  .top-dots {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    margin-bottom: 20px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+  }
+  .dot:nth-child(2) {
+    background-color: #ffbd2e;
+  }
+  .dot:nth-child(3) {
+    background-color: #27c93f;
+  }
+
+  .search-box {
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .search-box input {
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+  }
+
+  .menu {
+    flex: 1;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background 0.3s, border-right 0.3s;
+    position: relative;
+  }
+
+  .menu-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+
+  .menu-item:hover::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent);
+    border-radius: 4px 0 0 4px;
+  }
+
+  .menu-item svg {
+    fill: var(--accent);
+    flex-shrink: 0;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 10px 0;
+  }
+
+  .pro-upgrade {
+    background: #2a2a2a;
+    padding: 12px;
+    border-radius: 15px;
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .pro-upgrade a {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .spacer {
+    flex-grow: 1;
+  }
+
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: auto;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .user-info svg {
+    fill: gray;
+    cursor: pointer;
+  }
+
+  .theme-toggle {
+    padding: 10px;
+    background: #333;
+    border-radius: 12px;
+    text-align: center;
+    color: var(--text-light);
+    cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    .sidebar {
+      width: 60px;
+    }
+    .sidebar:hover {
+      width: 100%;
+    }
+  }
