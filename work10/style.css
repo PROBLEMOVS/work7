@@ -1,0 +1,132 @@
+ * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 40px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .persona {
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgba(255, 176, 132, 1);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 0 10px rgba(255, 176, 132, 1);
+      gap: 20px;
+    }
+
+    .left-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1 1 250px;
+    }
+
+    .left {
+      margin-top: auto;
+      height: 470px;
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 5px 5px 0px black;
+    }
+
+    .left img {
+      height: 185px;
+      margin-left: 25px;
+      width: 180px;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .left h2 {
+      margin: 0 0 10px;
+    }
+
+    .left p {
+      margin: 4px 0;
+    }
+
+    .quote {
+      margin-top: auto;
+      height: 60px;
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 5px 5px 0px black;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .right {
+      flex: 2 1 550px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .box {
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 5px 5px 0px black;
+    }
+
+    .box h3 {
+      margin-top: 0;
+    }
+
+    .bio {
+      border-bottom: 8px solid black;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .goals {
+      border-bottom: 8px solid #00c853;
+          min-height: 100px;
+          height: 125px;
+    }
+    .frustrations {
+      border-bottom: 8px solid #ef5350;
+          height: 250px;
+          margin-top: auto;
+          min-height: 180px;
+    }
+    .dream-companies {
+      border-bottom: 8px solid #2196f3;
+          margin-top: -125px;
+          height: 250px;
+          min-height: 250px;
+    }
+    .personality {
+          height: 125px;
+    min-height: 125px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      border-bottom: 8px solid #000;
+    }
+    .personality span {
+      background: #eee;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    .goals { min-height: 100px; }
+    .frustrations { min-height: 140px; }
+    .dream-companies { min-height: 140px; }
+    .personality { min-height: 100px; padding: 15px; }
